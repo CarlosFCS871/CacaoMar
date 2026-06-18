@@ -6,12 +6,11 @@ window.addEventListener('load', () => {
         const loader = document.getElementById('loader');
         if (loader) {
             loader.classList.add('hidden');
-            // Remover del DOM después de la animación
             setTimeout(() => {
                 loader.remove();
-            }, 600);
+            }, 800);
         }
-    }, 1200);
+    }, 1500);
 });
 
 // ========================================
@@ -26,7 +25,6 @@ if (menuToggle && navLinks) {
         navLinks.classList.toggle('active');
         menuToggle.setAttribute('aria-expanded', isActive);
 
-        // Prevenir scroll cuando el menú está abierto
         if (isActive) {
             document.body.style.overflow = 'hidden';
         } else {
@@ -34,7 +32,6 @@ if (menuToggle && navLinks) {
         }
     });
 
-    // Cerrar menú al hacer click en un link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             menuToggle.classList.remove('active');
@@ -44,7 +41,6 @@ if (menuToggle && navLinks) {
         });
     });
 
-    // Cerrar menú al hacer click fuera
     document.addEventListener('click', (e) => {
         if (!e.target.closest('nav') && navLinks.classList.contains('active')) {
             menuToggle.classList.remove('active');
@@ -56,7 +52,7 @@ if (menuToggle && navLinks) {
 }
 
 // ========================================
-// OPTIMIZACIÓN DE SCROLL - UN SOLO LISTENER
+// OPTIMIZACIÓN DE SCROLL
 // ========================================
 const navbar = document.getElementById('navbar');
 const sections = document.querySelectorAll('section[id]');
@@ -68,7 +64,6 @@ let ticking = false;
 function updateOnScroll() {
     const scrollY = window.pageYOffset;
 
-    // Navbar effect
     if (navbar) {
         if (scrollY > 100) {
             navbar.classList.add('scrolled');
@@ -77,7 +72,6 @@ function updateOnScroll() {
         }
     }
 
-    // Scroll to top button
     if (scrollTopBtn) {
         if (scrollY > 500) {
             scrollTopBtn.classList.add('visible');
@@ -86,7 +80,6 @@ function updateOnScroll() {
         }
     }
 
-    // Active nav link
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 150;
@@ -107,7 +100,6 @@ function updateOnScroll() {
     ticking = false;
 }
 
-// Un solo listener optimizado con requestAnimationFrame
 window.addEventListener('scroll', () => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
@@ -117,7 +109,6 @@ window.addEventListener('scroll', () => {
     }
 }, { passive: true });
 
-// Scroll to top button click
 if (scrollTopBtn) {
     scrollTopBtn.addEventListener('click', () => {
         window.scrollTo({
@@ -172,7 +163,6 @@ function closeModal() {
     }
 }
 
-// Cerrar modal con tecla ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         closeModal();
@@ -251,7 +241,6 @@ function showAlert(message, type) {
     }, 5000);
 }
 
-// Agregar animaciones de alerta al CSS dinámicamente
 const style = document.createElement('style');
 style.textContent = `
     @keyframes slideIn {
@@ -284,35 +273,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
         }
-    });
-});
-
-// ========================================
-// BOTONES DE AGREGAR AL CARRITO
-// ========================================
-document.querySelectorAll('.btn-add-cart').forEach(button => {
-    button.addEventListener('click', function (e) {
-        e.stopPropagation();
-
-        this.style.transform = 'scale(0.9)';
-        setTimeout(() => {
-            this.style.transform = 'scale(1.15)';
-        }, 100);
-        setTimeout(() => {
-            this.style.transform = '';
-        }, 300);
-
-        showAlert('Producto agregado al carrito. Contáctanos por WhatsApp para completar tu pedido.', 'success');
-    });
-});
-
-// ========================================
-// VISTA RÁPIDA DE PRODUCTOS
-// ========================================
-document.querySelectorAll('.btn-quick-view').forEach(button => {
-    button.addEventListener('click', function (e) {
-        e.stopPropagation();
-        showAlert('Vista rápida: Contáctanos para más información sobre este producto.', 'info');
     });
 });
 
