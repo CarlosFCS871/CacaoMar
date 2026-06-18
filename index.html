@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Cacao Mar - Chocolatería Boutique en Chimbote. Deliciosos chocolates artesanales hechos con pasión y los mejores ingredientes.">
+    <meta name="keywords"
+        content="chocolate artesanal, chocolatería boutique, Chimbote, Perú, trufas, bombones, cacao peruano">
+    <meta name="author" content="Cacao Mar">
     <title>Cacao Mar | Chocolatería Boutique - Chimbote</title>
 
-    <!-- Configuración para la vista previa al compartir (WhatsApp / Redes) -->
+    <!-- Open Graph para Redes Sociales -->
     <meta property="og:title" content="Cacao Mar | Chocolatería Boutique - Chimbote">
     <meta property="og:description"
         content="Cacao Mar - Chocolatería Boutique en Chimbote. Deliciosos chocolates artesanales hechos con pasión y los mejores ingredientes.">
-    <meta property="og:image" content="https://netlify.app">
+    <meta property="og:image" content="https://cacaomar.netlify.app/img/soloLogo.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cacaomar.netlify.app/">
+    <meta property="og:locale" content="es_PE">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,30 +26,34 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/Style.css">
-    <link rel="icon" type="image/png" href="img/favicon.png">
-</head>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+</head>
 
 <body>
     <!-- Loader -->
-    <div class="loader" id="loader">
+    <div class="loader" id="loader" aria-label="Cargando página">
         <div class="loader-content">
-            <img src="img/soloLogo.jpg" alt="Cargando" class="loader-logo">
+            <img src="img/soloLogo.jpg" alt="Cargando Cacao Mar" class="loader-logo">
             <h2 class="loader-text">Cacao Mar</h2>
         </div>
     </div>
 
     <!-- Navegación -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Navegación principal">
         <div class="nav-container">
-            <div class="logo">
-                <img src="img/soloLogo.jpg" alt="Cacao Mar" class="logo-icon">
+            <a href="#inicio" class="logo" aria-label="Cacao Mar - Inicio">
+                <img src="img/soloLogo.jpg" alt="Cacao Mar Logo" class="logo-icon">
                 <img src="img/soloLetraLogo.jpg" alt="Cacao Mar" class="logo-text-img">
-            </div>
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio" class="active">Inicio</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
@@ -54,11 +62,11 @@
                 <li><a href="#equipo">Equipo</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <div class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -74,15 +82,12 @@
                 <a href="#productos" class="btn btn-primary">
                     <i class="fas fa-gift"></i> Ver Productos
                 </a>
-                <a href="https://wa.link/wbdqiq" class="btn btn-secondary" target="_blank">
+                <a href="https://wa.link/wbdqiq" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i> Pedir Ahora
                 </a>
             </div>
-
         </div>
     </section>
-
-
 
     <!-- About Section -->
     <section class="about" id="nosotros">
@@ -90,14 +95,13 @@
             <div class="about-wrapper">
                 <div class="about-images fade-in">
                     <div class="about-img-main">
-                        <img src="img/Chocolates/chocolate.jpeg" alt="Sobre Nosotros">
+                        <img src="img/Chocolates/chocolate.jpeg" alt="Chocolate artesanal de Cacao Mar" loading="lazy">
                     </div>
                     <div class="about-img-secondary">
-                        <img src="img/Chocolates/chocolateBlanco.jpeg" alt="Chocolate artesanal">
+                        <img src="img/Chocolates/chocolateBlanco.jpeg" alt="Chocolate blanco artesanal" loading="lazy">
                     </div>
                 </div>
                 <div class="about-text fade-in">
-
                     <span class="section-tag">Nuestra Historia</span>
                     <h2 class="section-title">Pasión por el Chocolate Fino</h2>
                     <p class="about-description">
@@ -160,9 +164,9 @@
                 <div class="producto-card fade-in">
                     <div class="producto-badge">Más Vendido</div>
                     <div class="producto-img">
-                        <img src="img/Chocolates/chocolate.jpeg" alt="Trufas de Chocolate">
+                        <img src="img/Chocolates/chocolate.jpeg" alt="Trufas de Chocolate Artesanales" loading="lazy">
                         <div class="producto-overlay">
-                            <button class="btn-quick-view">Vista Rápida</button>
+                            <button class="btn-quick-view" aria-label="Ver detalles">Vista Rápida</button>
                         </div>
                     </div>
                     <div class="producto-info">
@@ -174,7 +178,7 @@
                                 <span class="precio-actual">S/ 45.00</span>
                                 <span class="precio-unit">/docena</span>
                             </div>
-                            <button class="btn-add-cart">
+                            <button class="btn-add-cart" aria-label="Agregar al carrito">
                                 <i class="fas fa-shopping-bag"></i>
                             </button>
                         </div>
@@ -183,9 +187,10 @@
 
                 <div class="producto-card fade-in">
                     <div class="producto-img">
-                        <img src="img/Chocolates/WhatsApp Image 2026-06-17 at 11.10.40 PM (1).jpeg" alt="Bombones">
+                        <img src="img/Chocolates/WhatsApp Image 2026-06-17 at 11.10.40 PM (1).jpeg" alt="Bombones Finos"
+                            loading="lazy">
                         <div class="producto-overlay">
-                            <button class="btn-quick-view">Vista Rápida</button>
+                            <button class="btn-quick-view" aria-label="Ver detalles">Vista Rápida</button>
                         </div>
                     </div>
                     <div class="producto-info">
@@ -196,7 +201,7 @@
                                 <span class="precio-actual">S/ 55.00</span>
                                 <span class="precio-unit">/caja 12 unid.</span>
                             </div>
-                            <button class="btn-add-cart">
+                            <button class="btn-add-cart" aria-label="Agregar al carrito">
                                 <i class="fas fa-shopping-bag"></i>
                             </button>
                         </div>
@@ -206,9 +211,9 @@
                 <div class="producto-card fade-in">
                     <div class="producto-badge nuevo">Nuevo</div>
                     <div class="producto-img">
-                        <img src="img/Chocolates/masChocolatenegroyblanco.jpeg" alt="Tabletas">
+                        <img src="img/Chocolates/masChocolatenegroyblanco.jpeg" alt="Tabletas Gourmet" loading="lazy">
                         <div class="producto-overlay">
-                            <button class="btn-quick-view">Vista Rápida</button>
+                            <button class="btn-quick-view" aria-label="Ver detalles">Vista Rápida</button>
                         </div>
                     </div>
                     <div class="producto-info">
@@ -219,14 +224,12 @@
                                 <span class="precio-actual">S/ 25.00</span>
                                 <span class="precio-unit">/100g</span>
                             </div>
-                            <button class="btn-add-cart">
+                            <button class="btn-add-cart" aria-label="Agregar al carrito">
                                 <i class="fas fa-shopping-bag"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -242,39 +245,146 @@
 
             <div class="galeria-grid">
                 <div class="galeria-item fade-in" onclick="openModal(this)">
-                    <img src="img/Chocolates/WhatsApp Image 2026-06-17 at 11.10.40 PM (2).jpeg" alt="Chocolate 1">
+                    <img src="img/Chocolates/WhatsApp Image 2026-06-17 at 11.10.40 PM (2).jpeg"
+                        alt="Chocolate artesanal 1" loading="lazy">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="galeria-item fade-in" onclick="openModal(this)">
-                    <img src="img/Chocolates/WhatsApp Image 2026-06-17 at 11.10.40 PM.jpeg" alt="Chocolate 2">
+                    <img src="img/Chocolates/WhatsApp Image 2026-06-17 at 11.10.40 PM.jpeg" alt="Chocolate artesanal 2"
+                        loading="lazy">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="galeria-item fade-in" onclick="openModal(this)">
-                    <img src="img/Chocolates/WhatsApp Image 2026-06-17 at 11.10.41 PM (2).jpeg" alt="Chocolate 3">
+                    <img src="img/Chocolates/WhatsApp Image 2026-06-17 at 11.10.41 PM (2).jpeg"
+                        alt="Chocolate artesanal 3" loading="lazy">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="galeria-item fade-in" onclick="openModal(this)">
-                    <img src="img/Chocolates/chocolateBlanco.jpeg" alt="Chocolate 4">
+                    <img src="img/Chocolates/chocolateBlanco.jpeg" alt="Chocolate blanco artesanal" loading="lazy">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="galeria-item fade-in" onclick="openModal(this)">
-                    <img src="img/Chocolates/rosana_chocolate.jpeg" alt="Chocolate 5">
+                    <img src="img/Chocolates/rosana_chocolate.jpeg" alt="Chocolate artesanal 5" loading="lazy">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 <div class="galeria-item fade-in" onclick="openModal(this)">
-                    <img src="img/Chocolates/maschocolates.jpeg" alt="Chocolate 6">
+                    <img src="img/Chocolates/maschocolates.jpeg" alt="Chocolate artesanal 6" loading="lazy">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Section -->
+    <section class="equipo" id="equipo">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <span class="section-tag">Nuestro Equipo</span>
+                <h2 class="section-title">Conoce a los Creadores</h2>
+                <p class="section-subtitle">Los talentosos emprendedores detrás de Cacao Mar</p>
+            </div>
+
+            <div class="equipo-nuevo">
+                <!-- Columna 1: La Dueña -->
+                <div class="equipo-duena fade-in">
+                    <div class="duena-img-wrapper">
+                        <img src="img/Chocolates/dueña.jpeg" alt="Fundadora de Cacao Mar" class="duena-img"
+                            loading="lazy">
+                        <div class="duena-overlay">
+                            <div class="duena-info">
+                                <h3>Nombre de la Dueña</h3>
+                                <p class="duena-cargo">Fundadora & Directora General</p>
+                                <p class="duena-desc">
+                                    Apasionada por el chocolate artesanal, con visión emprendedora
+                                    y compromiso con la excelencia en cada producto.
+                                </p>
+                                <div class="duena-social">
+                                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="duena-text">
+                        <span class="duena-label">Fundadora</span>
+                        <h3>Nombre de la Dueña</h3>
+                        <p class="duena-cargo-mobile">Directora General & Maestra Chocolatera</p>
+                        <p>
+                            Con más de 5 años de experiencia en chocolatería artesanal, lidera
+                            el equipo de Cacao Mar con pasión, creatividad y un compromiso
+                            inquebrantable con la calidad.
+                        </p>
+                        <p>
+                            Su visión es llevar el sabor del cacao peruano a cada rincón de
+                            Chimbote y más allá, creando experiencias únicas que deleiten
+                            los sentidos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Columna 2: El Equipo Completo -->
+                <div class="equipo-grupo fade-in">
+                    <div class="grupo-img-wrapper">
+                        <img src="img/grupo.jpeg" alt="Equipo Cacao Mar - 5 Integrantes" class="grupo-img"
+                            loading="lazy">
+                        <div class="grupo-overlay">
+                            <div class="grupo-info">
+                                <h3>Nuestro Equipo</h3>
+                                <p>5 emprendedores apasionados</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grupo-text">
+                        <span class="grupo-label">Equipo Completo</span>
+                        <h3>Los 5 Integrantes de Cacao Mar</h3>
+                        <p>
+                            Somos un equipo de 5 emprendedores comprometidos con la excelencia.
+                            Cada uno aporta su talento y creatividad para hacer de Cacao Mar
+                            una chocolatería boutique única en Chimbote.
+                        </p>
+                        <p>
+                            Juntos combinamos habilidades en producción, diseño, ventas,
+                            control de calidad y marketing digital para ofrecerte productos
+                            de la más alta calidad.
+                        </p>
+                        <p>
+                            Nuestro objetivo es claro: llevar el mejor chocolate artesanal
+                            peruano a tu mesa, endulzando tus momentos más especiales con
+                            pasión y dedicación.
+                        </p>
+
+                        <div class="grupo-valores">
+                            <div class="valor-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Pasión por el chocolate</span>
+                            </div>
+                            <div class="valor-item">
+                                <i class="fas fa-users"></i>
+                                <span>Trabajo en equipo</span>
+                            </div>
+                            <div class="valor-item">
+                                <i class="fas fa-star"></i>
+                                <span>Compromiso con la calidad</span>
+                            </div>
+                            <div class="valor-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Innovación constante</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -291,7 +401,7 @@
 
             <div class="testimonios-grid">
                 <div class="testimonio-card fade-in">
-                    <div class="testimonio-rating">
+                    <div class="testimonio-rating" aria-label="5 estrellas">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -307,7 +417,7 @@
                 </div>
 
                 <div class="testimonio-card fade-in">
-                    <div class="testimonio-rating">
+                    <div class="testimonio-rating" aria-label="5 estrellas">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -323,7 +433,7 @@
                 </div>
 
                 <div class="testimonio-card fade-in">
-                    <div class="testimonio-rating">
+                    <div class="testimonio-rating" aria-label="5 estrellas">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -340,8 +450,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- Contacto Section -->
     <section class="contacto" id="contacto">
@@ -398,10 +506,11 @@
                     <div class="contacto-redes">
                         <h4>Síguenos</h4>
                         <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.link/wbdqiq" class="social-link" aria-label="WhatsApp" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                         </div>
                     </div>
                 </div>
@@ -411,7 +520,7 @@
                         <h3>Envíanos un Mensaje</h3>
                         <p>¿Tienes un pedido especial? ¡Escríbenos!</p>
 
-                        <form id="contactForm">
+                        <form id="contactForm" novalidate>
                             <div class="form-group">
                                 <label for="nombre">
                                     <i class="fas fa-user"></i> Nombre completo
@@ -467,12 +576,12 @@
     </section>
 
     <!-- Mapa -->
-    <section class="mapa">
+    <section class="mapa" aria-label="Ubicación en el mapa">
         <div class="map-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31627.12345678901!2d-78.59123456789012!3d-9.081234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad1234567890ab%3A0x1234567890abcdef!2sChimbote%2C%20Ancash!5e0!3m2!1ses!2spe!4v1234567890123!5m2!1ses!2spe"
                 width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+                referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Cacao Mar en Chimbote">
             </iframe>
         </div>
     </section>
@@ -489,10 +598,11 @@
                     <p>Chocolatería Boutique artesanal en Chimbote, Ancash. Elaboramos chocolates finos con cacao
                         peruano de la más alta calidad.</p>
                     <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.link/wbdqiq" aria-label="WhatsApp" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -545,15 +655,22 @@
     </footer>
 
     <!-- Modal para imágenes -->
-    <div class="modal" id="imageModal" onclick="closeModal()">
-        <span class="modal-close">&times;</span>
+    <div class="modal" id="imageModal" onclick="closeModal()" role="dialog" aria-modal="true"
+        aria-label="Imagen ampliada">
+        <span class="modal-close" aria-label="Cerrar">&times;</span>
         <img src="" alt="Imagen ampliada" id="modalImg">
     </div>
 
     <!-- Botón WhatsApp Flotante -->
-    <a href="https://wa.link/wbdqiq" class="whatsapp-float" target="_blank">
+    <a href="https://wa.link/wbdqiq" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Botón Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/index.js"></script>
 </body>
