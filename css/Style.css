@@ -1705,23 +1705,43 @@ section {
    MAPA SECTION
    ======================================== */
 .mapa {
-    padding: 0;
+    padding: 2rem 0 0;
+    background: linear-gradient(180deg, rgba(239, 235, 223, 0.5) 0%, rgba(245, 240, 230, 0.8) 100%);
 }
 
 .map-container {
     position: relative;
     overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .map-container iframe {
+    display: block;
     width: 100%;
     height: 450px;
-    filter: grayscale(30%) sepia(15%) contrast(0.9);
+    border: 0;
+    border-radius: 24px;
+    box-shadow: var(--sombra-media);
+    filter: grayscale(20%) sepia(10%) contrast(0.95);
     transition: var(--transicion);
 }
 
 .map-container:hover iframe {
     filter: grayscale(0%) sepia(0%) contrast(1);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        padding: 0 1rem;
+    }
+
+    .map-container iframe {
+        height: 320px;
+        border-radius: 16px;
+    }
 }
 
 /* ========================================
